@@ -59,4 +59,4 @@ write.table(big_df, file=file, row.names=FALSE, col.names=TRUE, sep="\t", quote=
 system.time(fread(file))
 
 system.time(read.table(file, header=TRUE, sep="\t"))
-# Nothing to say
+

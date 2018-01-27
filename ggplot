@@ -1,0 +1,36 @@
+g = ggplot(mpgDT,aes(x=class))
+
+
+g + geom_bar() # y軸為個數
+
+g + geom_bar(aes(weight = displ)) # y軸為displ加總
+
+g + geom_bar(aes(fill = drv)) #填滿裡面顏色，如果使用color則更改邊框顏色
+
+g +
+ geom_bar(aes(fill=drv),position = position_stack(reverse = T))+
+#堆疊顏色顛倒
+ coord_flip()+
+ theme(legend.position = "top")
+
+
+df <- data.frame(trt = c("a", "b", "c"), outcome = c(2.3, 1.9, 3.2))
+
+ggplot(df, aes(trt, outcome)) +
+  geom_col()
+#有指定Y軸資料，使用geom_col
+
+ggplot(df, aes(trt)) +
+  geom_bar(aes(weight = outcome)) +
+  labs(y ="outcome")      
+#等同上方程式碼
+
+ggplot(df, aes(trt, outcome)) +
+  geom_point()
+
+# You can also use geom_bar() with continuous data, in which case
+# it will show counts at unique locations
+df <- data.frame(x = rep(c(2.9, 3.1, 4.5), c(5, 10, 4)))
+ggplot(df, aes(x)) + geom_bar()
+# cf. a histogram of the same data
+ggplot(df, aes(x)) + geom_histogram(binwidth = 0.5)

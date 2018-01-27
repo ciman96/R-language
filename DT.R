@@ -14,7 +14,8 @@ DT1[,{print(A)
       hist(A)
       NULL}]
 
-DT1[.N]
+DT1[.N] #顯示最後一列
+DT1[,.N] #總列數、共幾筆資料
 DT1[2:.N] #.N in row
 
 

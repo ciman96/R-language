@@ -12,7 +12,5 @@ DT2 = DT[,.(C = cumsum(C)),by = .(A,B)]
 
 
 
-DT2[,.(C = tail(C,2)),by = A]
-
-#DT2，先按照A分組，再抓取C的最後兩筆資料並命名C
+DT2[,.(C = tail(C,2)),by = A]  #DT2，先按照A分組，再抓取C的最後兩筆資料並命名C
 

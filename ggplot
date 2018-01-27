@@ -8,8 +8,7 @@ g + geom_bar(aes(weight = displ)) # y軸為displ加總
 g + geom_bar(aes(fill = drv)) #填滿裡面顏色，如果使用color則更改邊框顏色
 
 g +
- geom_bar(aes(fill=drv),position = position_stack(reverse = T))+
-#堆疊顏色顛倒
+ geom_bar(aes(fill=drv),position = position_stack(reverse = T))+   #堆疊顏色顛倒
  coord_flip()+
  theme(legend.position = "top")
 

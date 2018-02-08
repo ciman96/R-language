@@ -5,7 +5,7 @@ DF = data.frame(ID1 = sample(letters[1:2], 10, TRUE),
                 row.names = sample(LETTERS[1:10]))
 DT = as.data.table(DF)
 
-flights = fread("flgihts14.csv")
+flights = fread("flights14.csv")
 setkey(flights,origin)
 flights[.("JFK")]
 
